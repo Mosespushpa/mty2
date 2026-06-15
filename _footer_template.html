@@ -1,0 +1,80 @@
+    <!-- footer-->
+    <footer class="footer-blend">
+     <div class="footer-content">
+       <div class="footer-top">
+         <div class="footer-logo">
+           <img src="../../assets/img/img/logo/LOGO.png" alt="SHOP-WHEELS Logo">
+           <h3>SHOP-WHEELS</h3>
+         </div>
+          
+         <div class="footer-links">
+           <div class="footer-column">
+             <h4>Product</h4>
+             <ul>
+               <li><a href="../../index.html#services">Services</a></li>
+               <li><a href="../../index.html#sales">Sales</a></li>
+               <li><a href="../../index.html#gallery">Gallery</a></li>
+             </ul>
+           </div>
+            
+           <div class="footer-column">
+             <h4>Community</h4>
+             <ul>
+               <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+               <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+               <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+             </ul>
+           </div>
+            
+           <div class="footer-column">
+             <h4>Support</h4>
+             <ul>
+               <li><a href="../../index.html#contact">Contact Us</a></li>
+               <li><a href="../../index.html#About-us">About Us</a></li>
+               <li><a href="../../index.html#SIGN-UP">Sign In</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+        
+       <div class="footer-clock">
+         <h4>Current Time</h4>
+         <div class="clock-display">
+           <span id="hour">00</span>:<span id="min">00</span>:<span id="seconds">00</span>
+           <span id="ampm">AM</span>
+         </div>
+       </div>
+        
+       <div class="footer-bottom">
+         <p>&copy; 2024 SHOP-WHEELS. All rights reserved.</p>
+       </div>
+     </div>
+    </footer>
+    <script>
+        var hr=document.getElementById('hour');   
+        var min=document.getElementById('min');                
+        var ses=document.getElementById('seconds');   
+        var ampm1=document.getElementById('ampm');   
+        function updateClock(){
+            var date=new Date();
+            h=date.getHours();
+            m=date.getMinutes();
+            s=date.getSeconds();
+            ampm2="AM";
+            if (h>12){
+                h=h-12;
+                ampm2="PM";
+            }
+            h=h<10?"0"+h:h;
+            m=m<10?"0"+m:m;
+            s=s<10?"0"+s:s;
+
+            hr.innerText=h;
+            min.innerText=m;
+            ses.innerText=s;
+            ampm1.innerText=ampm2;
+            setTimeout(updateClock,1000);
+        }
+        updateClock();
+    </script>
+    <script src="../../assets/js/interactions.js" defer></script>

@@ -89,38 +89,62 @@
       
      <!--gallery - animated slides-->
     <section id="gallery" class="gallery-slider">
-      <div class="gallery-title">
-        <h2 class="section-title">Gallery - SHOWCASE</h2>
+      <div class="gallery-header">
+        <div class="gallery-title">
+          <h2 class="section-title">SHOP-WHEELS Showcase</h2>
+          <p class="gallery-subtitle">Explore Our Premium Vehicle Collection</p>
+        </div>
+        <div class="slider-controls">
+          <span class="slide-counter"><span id="current-slide">1</span>/<span id="total-slides">6</span></span>
+          <button class="slider-nav-btn prev" onclick="changeSlide(-1)">←</button>
+          <button class="slider-nav-btn next" onclick="changeSlide(1)">→</button>
+        </div>
       </div>
-      <div class="slider-container">
-        <div class="slide">
-          <img src="assets/img/img/carbreakdown/c1.0.jpg" alt="Showcase 1">
+      <div class="slider-wrapper">
+        <div class="slider-track">
+          <div class="slide-card" data-title="Premium Service" data-desc="Expert maintenance for all vehicles">
+            <img src="assets/img/img/carbreakdown/c1.0.jpg" alt="Showcase 1">
+            <div class="slide-overlay">
+              <h3>Premium Service</h3>
+              <p>Expert maintenance for all vehicles</p>
+            </div>
+          </div>
+          <div class="slide-card" data-title="Quality Parts" data-desc="Genuine parts and accessories">
+            <img src="assets/img/img/carbreakdown/c1.1.jpg" alt="Showcase 2">
+            <div class="slide-overlay">
+              <h3>Quality Parts</h3>
+              <p>Genuine parts and accessories</p>
+            </div>
+          </div>
+          <div class="slide-card" data-title="Professional Team" data-desc="Certified mechanics at your service">
+            <img src="assets/img/img/carbreakdown/c1.2.jpg" alt="Showcase 3">
+            <div class="slide-overlay">
+              <h3>Professional Team</h3>
+              <p>Certified mechanics at your service</p>
+            </div>
+          </div>
+          <div class="slide-card" data-title="Modern Facility" data-desc="State-of-the-art service center">
+            <img src="assets/img/img/carbreakdown/c1.3.jpg" alt="Showcase 4">
+            <div class="slide-overlay">
+              <h3>Modern Facility</h3>
+              <p>State-of-the-art service center</p>
+            </div>
+          </div>
+          <div class="slide-card" data-title="Quick Service" data-desc="Fast and efficient repairs">
+            <img src="assets/img/img/carbreakdown/c1.4.jpg" alt="Showcase 5">
+            <div class="slide-overlay">
+              <h3>Quick Service</h3>
+              <p>Fast and efficient repairs</p>
+            </div>
+          </div>
+          <div class="slide-card" data-title="Trusted Brand" data-desc="Your reliable automotive partner">
+            <img src="assets/img/img/carbreakdown/c1.5.jpg" alt="Showcase 6">
+            <div class="slide-overlay">
+              <h3>Trusted Brand</h3>
+              <p>Your reliable automotive partner</p>
+            </div>
+          </div>
         </div>
-        <div class="slide">
-          <img src="assets/img/img/carbreakdown/c1.1.jpg" alt="Showcase 2">
-        </div>
-        <div class="slide">
-          <img src="assets/img/img/carbreakdown/c1.2.jpg" alt="Showcase 3">
-        </div>
-        <div class="slide">
-          <img src="assets/img/img/carbreakdown/c1.3.jpg" alt="Showcase 4">
-        </div>
-        <div class="slide">
-          <img src="assets/img/img/carbreakdown/c1.4.jpg" alt="Showcase 5">
-        </div>
-        <div class="slide">
-          <img src="assets/img/img/carbreakdown/c1.5.jpg" alt="Showcase 6">
-        </div>
-        <a class="prev" onclick="changeSlide(-1)">❮</a>
-        <a class="next" onclick="changeSlide(1)">❯</a>
-      </div>
-      <div class="dots-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
       </div>
     </section>
       <!--Gallery Section Removed - Brands Section Removed-->
@@ -379,9 +403,9 @@
        </div>
      </div>
     </footer>
-    <script src="/assets/js/animated-bg.js" defer></script>
-    <script src="/assets/js/interactions.js" defer></script>
-      <script src="/assets/js/sliders.js" defer></script>
+    <script src="assets/js/animated-bg.js" defer></script>
+    <script src="assets/js/interactions.js" defer></script>
+    <script src="assets/js/sliders.js" defer></script>
 </body>
 </html>
 

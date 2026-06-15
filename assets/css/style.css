@@ -65,7 +65,7 @@
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot.active, .dot:hover {
   background-color: #454035; /* Using color from your border scheme */
 }
 
@@ -152,7 +152,7 @@ h3{
 .card .info .icon a:hover{
   color: #f0f0f0;
 }
-*/services
+/* services */
 *{
   padding: 0;
   margin: 0;
@@ -701,7 +701,7 @@ h2 {
 }
 
 /* Add scroll margin to all sections with IDs for proper anchor alignment */
-[id] { scroll-margin-top: 100px; }
+[id] { scroll-margin-top: 50px; }
 
 @media (max-width: 768px) {
   html { scroll-padding-top: 80px; }
@@ -755,7 +755,7 @@ h2 {
 /* ===== ABOUT-US SECTION ===== */
 .about-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(100,50,200,0.1), rgba(50,200,100,0.1));
+  background: linear-gradient(135deg, rgba(100,50,200,0.05), rgba(50,200,100,0.05));
   position: relative;
   overflow: hidden;
 }
@@ -813,7 +813,7 @@ h2 {
 }
 
 .about-card {
-  background: linear-gradient(135deg, rgba(100,50,200,0.25), rgba(50,150,100,0.25));
+  background: linear-gradient(135deg, rgba(100,50,200,0.15), rgba(50,150,100,0.15));
   border: 2px solid rgba(100,200,50,0.5);
   border-radius: 15px;
   padding: 30px;
@@ -826,7 +826,7 @@ h2 {
   transform: translateX(10px);
   border-color: rgba(0,255,136,0.8);
   box-shadow: 0 10px 30px rgba(100,50,200,0.3);
-  background: linear-gradient(135deg, rgba(100,50,200,0.35), rgba(50,150,100,0.35));
+  background: linear-gradient(135deg, rgba(100,50,200,0.25), rgba(50,150,100,0.25));
 }
 
 .about-card h2 {
@@ -1124,7 +1124,7 @@ body { animation: fadeIn 0.5s ease; }
 /* ===== SERVICES & SALES SECTION ===== */
 .services-section, .sales-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(10,14,39,0.95), rgba(50,20,80,0.9));
+  background: linear-gradient(135deg, rgba(10,14,39,0.7), rgba(50,20,80,0.65));
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0,255,136,0.2);
   border-bottom: 1px solid rgba(255,0,255,0.2);
@@ -1218,114 +1218,203 @@ body { animation: fadeIn 0.5s ease; }
   text-shadow: 0 0 10px rgba(0,255,136,0.6);
 }
 
-/* ===== GALLERY SLIDER ===== */
+/* ===== GALLERY SLIDER (Modern Card Layout) ===== */
 .gallery-slider {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(50,20,80,0.9), rgba(10,14,39,0.95));
+  background: linear-gradient(135deg, rgba(10,14,39,0.7), rgba(30,20,50,0.65));
   backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255,0,255,0.2);
-  border-bottom: 1px solid rgba(0,255,136,0.2);
+  border-top: 1px solid rgba(0,255,136,0.2);
+  border-bottom: 1px solid rgba(255,0,255,0.2);
+  overflow: hidden;
+}
+
+.gallery-header {
+  max-width: 1400px;
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .gallery-title {
-  text-align: center;
-  margin-bottom: 50px;
+  text-align: left;
 }
 
-.slider-container {
-  max-width: 900px;
-  position: relative;
-  margin: 0 auto;
-  background: rgba(0,0,0,0.3);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 0 40px rgba(0,255,136,0.3), inset 0 0 40px rgba(100,50,200,0.1);
-  border: 2px solid rgba(0,255,136,0.3);
+.gallery-subtitle {
+  color: rgba(0,255,136,0.7);
+  font-size: 16px;
+  margin-top: 10px;
+  letter-spacing: 1px;
 }
 
-.slide {
-  display: none;
-  width: 100%;
-  /* animation handled by .slide.fade below */
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.slide.fade {
-  display: block;
-  animation: fade 0.5s ease; /* ✅ uses the correctly defined @keyframes fade */
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: 50px;
-  height: 50px;
-  transform: translateY(-50%);
-  background: rgba(100,50,200,0.8);
+.slide-counter {
   color: #00ff88;
-  font-size: 30px;
-  border: 2px solid rgba(0,255,136,0.6);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+#current-slide {
+  color: #fff;
+  font-size: 24px;
+}
+
+.slider-nav-btn {
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  background: rgba(0,255,136,0.1);
+  border: 2px solid rgba(0,255,136,0.4);
+  color: #00ff88;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  z-index: 5;
-  font-weight: bold;
 }
 
-.prev:hover, .next:hover {
+.slider-nav-btn:hover {
   background: rgba(0,255,136,0.3);
-  border-color: rgba(0,255,136,0.9);
-  box-shadow: 0 0 20px rgba(0,255,136,0.6);
-  transform: translateY(-50%) scale(1.15);
+  border-color: #00ff88;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,255,136,0.5);
 }
 
-.prev {
-  left: 15px;
+.slider-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.next {
-  right: 15px;
-}
-
-.dots-container {
-  text-align: center;
-  padding: 25px;
-  background: rgba(0,0,0,0.2);
+.slider-track {
   display: flex;
-  justify-content: center;
-  gap: 15px;
+  gap: 25px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 10px 0;
 }
 
-.dot {
+.slide-card {
+  min-width: calc(25% - 19px);
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(0,255,136,0.3);
+  background: rgba(0,0,0,0.3);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: all 0.4s ease;
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: rgba(0,255,136,0.4);
-  border-radius: 50%;
-  display: inline-block;
-  border: 2px solid rgba(0,255,136,0.6);
-  transition: all 0.3s ease;
 }
 
-.dot.active, .dot:hover {
-  background-color: #00ff88;
-  box-shadow: 0 0 15px rgba(0,255,136,0.8);
-  transform: scale(1.3);
+.slide-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0,255,136,0.8);
+  box-shadow: 0 15px 40px rgba(0,255,136,0.3);
+}
+
+.slide-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: all 0.4s ease;
+}
+
+.slide-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.9) 100%);
+  padding: 30px 20px 20px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.slide-card:hover .slide-overlay {
+  transform: translateY(0);
+}
+
+.slide-overlay h3 {
+  color: #00ff88;
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  text-shadow: 0 0 10px rgba(0,255,136,0.6);
+}
+
+.slide-overlay p {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .slide-card {
+    min-width: calc(33.333% - 17px);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .slider-controls {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .slide-card {
+    min-width: calc(50% - 13px);
+    height: 280px;
+  }
+  
+  .slide-card img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-card {
+    min-width: 100%;
+    height: 250px;
+  }
+  
+  .slide-card img {
+    height: 250px;
+  }
+  
+  .slider-track {
+    gap: 15px;
+  }
 }
 
 /* ===== SIGN-IN SECTION ===== */
 .signin-section {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(10,14,39,0.95), rgba(50,20,80,0.9));
+  background: linear-gradient(135deg, rgba(10,14,39,0.7), rgba(50,20,80,0.65));
   backdrop-filter: blur(10px);
   border-top: 1px solid rgba(0,255,136,0.2);
   border-bottom: 1px solid rgba(255,0,255,0.2);
@@ -1482,7 +1571,7 @@ body { animation: fadeIn 0.5s ease; }
 
 /* ===== FOOTER BLEND ===== */
 .footer-blend {
-  background: linear-gradient(135deg, rgba(10,14,39,0.95), rgba(50,20,80,0.9));
+  background: linear-gradient(135deg, rgba(10,14,39,0.7), rgba(50,20,80,0.65));
   backdrop-filter: blur(10px);
   border-top: 2px solid rgba(0,255,136,0.3);
   padding: 60px 20px 30px;
