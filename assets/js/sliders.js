@@ -49,12 +49,12 @@ function showSlides(n) {
   }
 }
 
-// Starts execution block every 1000ms (1 second)
+// Starts execution block every 3000ms (3 seconds)
 function startAutoSlide() {
   slideInterval = setInterval(() => {
     slideIndex++;
     showSlides(slideIndex);
-  }, 1000); 
+  }, 3000); 
 }
 
 // Resets timer on user interaction to prevent instant double skips

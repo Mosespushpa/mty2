@@ -1246,7 +1246,7 @@ body { animation: fadeIn 0.5s ease; }
 .slide {
   display: none;
   width: 100%;
-  animation: fadeIn 0.5s ease;
+  /* animation handled by .slide.fade below */
 }
 
 .slide img {
@@ -1257,6 +1257,7 @@ body { animation: fadeIn 0.5s ease; }
 
 .slide.fade {
   display: block;
+  animation: fade 0.5s ease; /* ✅ uses the correctly defined @keyframes fade */
 }
 
 .prev, .next {
