@@ -1568,7 +1568,60 @@ body { animation: fadeIn 0.5s ease; }
   text-decoration: none;
   color: inherit;
 }
+.signin-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid rgba(0,255,136,0.4);
+  box-shadow: 0 0 40px rgba(100,50,200,0.3);
+  min-height: 300px; /* keeps panel stable when image hides */
+}
 
+/* Message overlay — hidden by default */
+.signin-message {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,14,39,0.92), rgba(50,20,80,0.88));
+  backdrop-filter: blur(6px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.signin-message.visible {
+  display: flex;
+}
+
+.signin-message .msg-icon {
+  font-size: 56px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 12px rgba(0,255,136,0.7));
+}
+
+.signin-message h3 {
+  color: #00ff88;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 0 0 14px rgba(0,255,136,0.6);
+  letter-spacing: 1px;
+}
+
+.signin-message p {
+  color: rgba(255,255,255,0.75);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.signin-message .msg-username {
+  color: #ff00ff;
+  text-shadow: 0 0 10px rgba(255,0,255,0.6);
+  font-weight: 700;
+}
 /* ===== FOOTER BLEND ===== */
 .footer-blend {
   background: linear-gradient(135deg, rgba(10,14,39,0.7), rgba(50,20,80,0.65));
@@ -1651,6 +1704,10 @@ body { animation: fadeIn 0.5s ease; }
   text-shadow: 0 0 10px rgba(0,255,136,0.4);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+#end{
+  padding-left: 50px;
+  letter-spacing: 5px;
 }
 
 .footer-column ul {

@@ -18,7 +18,7 @@
     <nav class="navbar navbar-white bg-white  navbar-expand-md text text-dark  sticky-top">
         <div class="container-fluid">
         <img src="assets/img/img/logo/LOGO.png" width="35" height="30" alt="logo">
-          <span class="text-dark " id="nav"> <H3>SHOP-WHEELS</H3></span>
+          <span class="text-dark " id="nav"> <H3>SHOP-WHEELS<a href="#home" class="nav-link"></a></H3></span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#restaruant-navbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -170,60 +170,58 @@
           </a>
         </div>
      </div>
-     <!--Sign-In Section-->
-     <div class="signin-section" id="SIGN-UP">
-       <div class="signin-container">
-         <div class="signin-header">
-           <h2 class="section-title">Join SHOP-WHEELS</h2>
-           <p class="signin-subtitle">Choose your action</p>
-         </div>
-          
-         <div class="signin-content">
-           <div class="signin-image">
-             <img src="assets/img/img/login/login1.png" alt="Shop Wheels">
-           </div>
-            
-           <div class="signin-form-container">
-             <div class="form-toggle">
-               <button class="toggle-btn active" data-form="login">Sign In</button>
-               <button class="toggle-btn" data-form="register">Register</button>
-             </div>
-              
-             <!-- Sign In Form -->
-             <form id="login-form" class="signin-form active">
-               <div class="form-group">
-                 <input type="email" placeholder="Email" required>
-               </div>
-               <div class="form-group">
-                 <input type="password" placeholder="Password" required>
-               </div>
-               <button type="submit" class="signin-btn">
-                 <a href="pages/common/thanks.html" class="nav-link">Sign In</a>
-               </button>
-             </form>
-              
-             <!-- Register Form -->
-             <form id="register-form" class="signin-form">
-               <div class="form-group">
-                 <input type="text" placeholder="Full Name" required>
-               </div>
-               <div class="form-group">
-                 <input type="email" placeholder="Email" required>
-               </div>
-               <div class="form-group">
-                 <input type="tel" placeholder="Phone" required>
-               </div>
-               <div class="form-group">
-                 <input type="password" placeholder="Password" required>
-               </div>
-               <button type="submit" class="signin-btn">
-                 <a href="pages/common/thanks.html" class="nav-link">Register</a>
-               </button>
-             </form>
-           </div>
-         </div>
-       </div>
-     </div>
+    <!-- Sign-In Section -->
+<div class="signin-section" id="SIGN-UP">
+  <div class="signin-container">
+    <div class="signin-header">
+      <h2 class="section-title">Join SHOP-WHEELS</h2>
+      <p class="signin-subtitle">Choose your action</p>
+    </div>
+
+    <div class="signin-content">
+      <!-- LEFT PANEL -->
+      <div class="signin-image" id="signin-left-panel">
+        <img src="assets/img/img/login/login1.png" alt="Shop Wheels" id="signin-img">
+        <div class="signin-message" id="signin-message"></div>
+      </div>
+
+      <div class="signin-form-container">
+        <div class="form-toggle">
+          <button class="toggle-btn active" data-form="login">Sign In</button>
+          <button class="toggle-btn" data-form="register">Register</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="login-form" class="signin-form active">
+          <div class="form-group">
+            <input type="email" id="login-email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="login-password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="register-form" class="signin-form">
+          <div class="form-group">
+            <input type="text" id="register-name" placeholder="Full Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="register-email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="register-phone" placeholder="Phone" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="register-password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="signin-btn">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
      <!--about-us-->
      <div id="About-us" class="about-section">
        <div class="about-container">
@@ -362,29 +360,31 @@
           
          <div class="footer-links">
            <div class="footer-column">
+             
              <h4>Product</h4>
              <ul>
-               <li><a href="#services">Services</a></li>
-               <li><a href="#sales">Sales</a></li>
-               <li><a href="#gallery">Gallery</a></li>
+               <li id="end"><a href="#services">Services</a></li>
+               <li id="end"><a href="#sales">Sales</a></li>
+               <li id="end"><a href="#gallery">Gallery</a></li>
              </ul>
            </div>
             
            <div class="footer-column">
+             
              <h4>Community</h4>
              <ul>
-               <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-               <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-               <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+               <li id="end"><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+               <li id="end"><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+               <li id="end"><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
              </ul>
            </div>
             
            <div class="footer-column">
              <h4>Support</h4>
              <ul>
-               <li><a href="#contact">Contact Us</a></li>
-               <li><a href="#About-us">About Us</a></li>
-               <li><a href="#SIGN-UP">Sign In</a></li>
+               <li id="end"><a href="#contact">Contact Us</a></li>
+               <li id="end"><a href="#About-us">About Us</a></li>
+               <li id="end"><a href="#SIGN-UP">Sign In</a></li>
              </ul>
            </div>
          </div>
@@ -406,6 +406,7 @@
     <script src="assets/js/animated-bg.js" defer></script>
     <script src="assets/js/interactions.js" defer></script>
     <script src="assets/js/sliders.js" defer></script>
+    <script src="assets/js/sign-in.js" defer></script>
 </body>
 </html>
 
